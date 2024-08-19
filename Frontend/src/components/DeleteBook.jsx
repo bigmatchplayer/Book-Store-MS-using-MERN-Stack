@@ -6,7 +6,7 @@ const DeleteBook = () => {
     const navigate = useNavigate()
     const {id} = useParams()
     useEffect(() => {
-      axios.delete('http://localhost:3001/book/book/'+id)
+      axios.delete('https://book-store-ms-using-mern-stack-back.onrender.com/book/book/'+id)
       .then(res => {
           if(res.data.deleted) {
               navigate('/books')
